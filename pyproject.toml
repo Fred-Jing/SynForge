@@ -1,5 +1,5 @@
 [project]
-name = "primer-build"
+name = "synforge"
 version = "0.1.0"
 description = "Local oligo assembly and expression construct design"
 requires-python = ">=3.12,<3.13"

@@ -1,4 +1,4 @@
-# Primer Build
+# SynForge
 
 A local Python toolkit for **gene assembly design, expression-construct preparation, and sequencing-based clone selection**. It grew out of a wet-lab workflow for converting protein designs into plasmid maps and synthesis oligos.
 
@@ -24,12 +24,12 @@ Point-mutation primer design is not yet a generic automated CLI. The PCA CLI doe
 Python **3.12**, using [uv](https://docs.astral.sh/uv/):
 
 ```sh
-git clone https://github.com/Fred-Jing/primer-build.git
-cd primer-build
+git clone https://github.com/Fred-Jing/SynForge.git
+cd SynForge
 uv sync --locked
 ```
 
-Run from this checkout using `uv run`; this release is not a PyPI package. macOS Apple Silicon is the original development platform. A macOS/Linux CI recipe is supplied in `ci/github-actions.yml`; remote CI is not enabled yet because the current GitHub credentials cannot write Actions workflows. Windows native support is not claimed: `pysam` and other scientific dependencies may require Linux/WSL or additional setup.
+Run from this checkout using `uv run`; this release is not a PyPI package. The internal Python namespace remains `primer_build` for compatibility. macOS Apple Silicon is the original development platform. A macOS/Linux CI recipe is supplied in `ci/github-actions.yml`; remote CI is not enabled yet because the current GitHub credentials cannot write Actions workflows. Windows native support is not claimed: `pysam` and other scientific dependencies may require Linux/WSL or additional setup.
 
 ## Try the synthetic examples
 

@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Rename the public project and repository to SynForge; scientific algorithms and the internal `primer_build` module namespace are unchanged.
+
 ## 0.1.0 — 2026-10-19
 
 Initial public core extracted from the laboratory workspace.

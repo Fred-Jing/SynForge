@@ -1,4 +1,4 @@
-# Primer Build — public core
+# SynForge — public core
 
 - Use Python 3.12 and the project environment: `uv sync --locked` and `uv run …`.
 - Keep changes focused. Laboratory data, contact information and real order files are not repository fixtures.

@@ -1,5 +1,5 @@
 version = 1
-revision = 3
+revision = 5
 requires-python = "==3.12.*"
 
 [[package]]
@@ -59,27 +59,6 @@ wheels = [
 ]
 
 [[package]]
-name = "primer-build"
-version = "0.1.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "biopython" },
-    { name = "openpyxl" },
-    { name = "primer3-py" },
-    { name = "pysam" },
-    { name = "viennarna" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "biopython", specifier = "==1.87" },
-    { name = "openpyxl", specifier = "==3.1.5" },
-    { name = "primer3-py", specifier = ">=2.3.1" },
-    { name = "pysam", specifier = ">=0.23,<0.24" },
-    { name = "viennarna", specifier = "==2.7.2" },
-]
-
-[[package]]
 name = "primer3-py"
 version = "2.3.1"
 source = { registry = "https://pypi.org/simple" }
@@ -102,6 +81,27 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/df/a6/c100df6c8118b4ce1f9c086bb9cf5bccd4f71d05ceb2ecf474f3b0ea87b8/pysam-0.23.3-cp312-cp312-manylinux_2_28_x86_64.whl", hash = "sha256:4099393fc5097b5081c7efaf46b0109e4f0a8ed18f86d497219a8bf739c73992", size = 24021198, upload-time = "2025-06-10T11:19:21.379Z" },
     { url = "https://files.pythonhosted.org/packages/f1/92/32e1b13f30f16fe2c948f9b9e04c6e7698beaa539ea1a2bcddc51ed6c9b7/pysam-0.23.3-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:4f04b9aa9b23d767fe36652eacb8370791e3b56816a7e50553d52c65ccdce77f", size = 22925815, upload-time = "2025-06-10T11:22:56.894Z" },
     { url = "https://files.pythonhosted.org/packages/fa/7d/ccfaa2d6f9f07b357696b07883d5c5471f980938c2293324631425d95523/pysam-0.23.3-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:701843e5dc67c8eb217c3265039c699a5f83cce64fbc4225268141796e972353", size = 23351352, upload-time = "2025-06-10T11:19:24.207Z" },
+]
+
+[[package]]
+name = "synforge"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "biopython" },
+    { name = "openpyxl" },
+    { name = "primer3-py" },
+    { name = "pysam" },
+    { name = "viennarna" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "biopython", specifier = "==1.87" },
+    { name = "openpyxl", specifier = "==3.1.5" },
+    { name = "primer3-py", specifier = ">=2.3.1" },
+    { name = "pysam", specifier = ">=0.23,<0.24" },
+    { name = "viennarna", specifier = "==2.7.2" },
 ]
 
 [[package]]
