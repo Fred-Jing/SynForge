@@ -30,7 +30,7 @@ def parse_args() -> argparse.Namespace:
         "--project",
         required=True,
         help=(
-            "Project directory under primer build, or an absolute path. "
+            "Project directory under this checkout, or an absolute path. "
             "It must contain structures/."
         ),
     )
@@ -47,7 +47,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--primer-start",
         required=True,
-        help="First outer-primer naming example, for example K1-1-1-FW",
+        help="First outer-primer naming example, for example KYN-1-1-1-FW",
     )
     parser.add_argument(
         "--candidates",
