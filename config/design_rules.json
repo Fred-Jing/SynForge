@@ -1,0 +1,124 @@
+{
+  "version": 3,
+  "input": {
+    "protein_chain": "A",
+    "ncaa_codon": "TAG",
+    "prepend_initiator_methionine": true,
+    "nonstandard_residue_policy": "encode_polymer_nonstandard_as_X_and_TAG",
+    "ignored_structure_comp_ids": [
+      "HOH",
+      "WAT"
+    ],
+    "forced_polymer_comp_ids": [],
+    "component_translation_overrides": {}
+  },
+  "expression": {
+    "host": "Escherichia coli",
+    "polymerase": "2x Phanta Max Master Mix",
+    "fixed_c_terminal_dna": "GGTGGTAGCGGTGGTAGCGGCTGCAGCCTCGAGCACCACCACCACCACCACTGA",
+    "fixed_c_terminal_translation": "GGSGGSGCSLEHHHHHH*",
+    "allow_additional_internal_stops": false,
+    "backbone_template": "pet22b_cys_label_backbone.dna",
+    "plasmid_name_prefix": "PET-22B",
+    "cys_labeling_position_from_poi_end": 8
+  },
+  "thermodynamics": {
+    "tm_model": "Biopython DNA_NN4; 250 nM strand; 50 mM Na; no explicit Mg correction",
+    "annealing_tm_target_c": 64.0,
+    "annealing_tm_min_c": 62.0,
+    "annealing_tm_max_c": 66.0,
+    "gibson_tm_min_c": 60.0,
+    "annealing_length_preferred_min": 20,
+    "annealing_length_preferred_max": 35,
+    "annealing_length_hard_min": 17,
+    "annealing_length_hard_max": 40,
+    "gibson_length_min": 20,
+    "gibson_length_max": 35
+  },
+  "oligos": {
+    "standard_tier_max_nt": 59,
+    "long_tier_max_nt": 89,
+    "absolute_max_nt": 89,
+    "preferred_core_min_nt": 45,
+    "standard_core_max_nt": 59,
+    "allow_long_core_pair": true,
+    "long_core_pair_penalty": 35.0,
+    "prefer_short_long_oligos": true,
+    "short_long_core_penalty_weight": 1.0,
+    "order_names_include_construct_usage": true,
+    "extra_oligo_penalty": 2.0,
+    "pcr_round_penalty": 25.0,
+    "overlap_fraction_soft_max": 0.65,
+    "overlap_fraction_hard_max": 0.78,
+    "homopolymer_max": 5
+  },
+  "assembly": {
+    "min_synthetic_fragments": 3,
+    "max_synthetic_fragments": 4,
+    "preferred_synthetic_fragments": 3,
+    "vector_fragment_options": [
+      1,
+      2
+    ],
+    "preferred_vector_fragments": 2,
+    "insert_upstream_scan_start": 5080,
+    "insert_upstream_scan_end": 5200,
+    "insert_downstream_extra_min": 29,
+    "insert_downstream_extra_max": 80,
+    "vector_split_min_distance_from_insert": 800,
+    "vector_amplicon_min_bp": 800,
+    "vector_amplicon_max_bp": 5000
+  },
+  "codon_optimization": {
+    "beam_width": 350,
+    "candidate_count": 24,
+    "rare_codon_frequency_floor": 0.08,
+    "codon_usage_weight": 1.0,
+    "gc_target": 0.52,
+    "gc_window_nt": 30,
+    "gc_window_min": 0.35,
+    "gc_window_max": 0.68,
+    "gc_penalty_weight": 9.0,
+    "repeat_kmer": 8,
+    "repeat_penalty": 3.0,
+    "homopolymer_penalty": 12.0,
+    "five_prime_diversity_nt": 45,
+    "sd_like_search_penalty": 4.0,
+    "assembly_score_weight": 1.0,
+    "assembly_fallback": {
+      "codon_usage_weight": 0.5,
+      "gc_target": 0.58,
+      "gc_window_min": 0.45,
+      "gc_penalty_weight": 20.0
+    }
+  },
+  "translation_initiation": {
+    "folding_engine": "ViennaRNA 2.7.2",
+    "temperature_c": 37.0,
+    "five_prime_upstream_nt": 30,
+    "five_prime_cds_nt": 45,
+    "rbs_motif": "AGGAG",
+    "five_prime_mfe_soft_floor_kcal_mol": -15.0,
+    "five_prime_mfe_base_weight": 0.02,
+    "five_prime_mfe_below_floor_weight": 0.35,
+    "initiation_unpaired_probability_soft_floor": 0.35,
+    "initiation_accessibility_penalty_weight": 2.0,
+    "local_window_nt": 60,
+    "local_step_nt": 3,
+    "local_mfe_soft_floor_kcal_mol": -25.0,
+    "local_mfe_below_floor_weight": 0.12,
+    "sd_scan_start_nt": 0,
+    "sd_like_motifs": [
+      "AGGAGG",
+      "GAGGAG",
+      "AGGAG",
+      "GGAGG"
+    ],
+    "sd_like_penalty": 4.0
+  },
+  "output": {
+    "clean_snapgene_files": true,
+    "preserve_template_history": false,
+    "overwrite_inputs": false
+  }
+}
