@@ -42,3 +42,5 @@ PCA CLI 在固定 DNA 上生成首轮拼接寡核苷酸，当前支持 ≤60 nt�
 |[贡献约定](../CONTRIBUTING.md)|验证与变更规范|
 
 运行检查：`uv run python -m unittest discover -s tests -v`。实际批次、测序原始数据、联系方式、历史订单和供应商原模板保留在实验工作区；本仓库维护可复用核心及人工示例。
+
+自动化配置见 `ci/github-actions.yml`。当前 GitHub 连接拒绝写入 Actions 工作流，因此尚未启用远端 CI；本地 49 项测试已通过。具备相应权限后，将该文件放入 `.github/workflows/tests.yml` 即可启用。

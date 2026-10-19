@@ -29,7 +29,7 @@ cd primer-build
 uv sync --locked
 ```
 
-Run from this checkout using `uv run`; this release is not a PyPI package. macOS Apple Silicon is the original development platform. CI exercises macOS and Linux. Windows native support is not claimed: `pysam` and other scientific dependencies may require Linux/WSL or additional setup.
+Run from this checkout using `uv run`; this release is not a PyPI package. macOS Apple Silicon is the original development platform. A macOS/Linux CI recipe is supplied in `ci/github-actions.yml`; remote CI is not enabled yet because the current GitHub credentials cannot write Actions workflows. Windows native support is not claimed: `pysam` and other scientific dependencies may require Linux/WSL or additional setup.
 
 ## Try the synthetic examples
 
@@ -77,4 +77,4 @@ uv run python -m unittest discover -s tests -v
 
 Tests cover circular coordinates, variant handling, Sanger quality/coverage and trace gates, structural input parsing, expression-screening invariants, PCA screening, workbook output and synthetic CLI roundtrips. Real experimental batches and their dataset-dependent regressions remain outside this public core.
 
-See [contributing](CONTRIBUTING.md) and [methods](docs/METHODS.md). Source code is MIT licensed; dependencies retain their respective licenses. SnapGene, GENEWIZ and Azenta are third-party names; this project is not affiliated with them.
+See [validation](docs/VALIDATION.md), [contributing](CONTRIBUTING.md) and [methods](docs/METHODS.md). Source code is MIT licensed; dependencies retain their respective licenses. SnapGene, GENEWIZ and Azenta are third-party names; this project is not affiliated with them.
